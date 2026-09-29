@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billriz Condor · Energy & Environment Engineer</title>
+  <meta name="description" content="Portfolio of Billriz Condor: life cycle assessment, techno-economic analysis, climate risk and data-driven modelling for the energy transition.">
+  <meta property="og:title" content="Billriz Condor · Energy & Environment Engineer">
+  <meta property="og:description" content="Projects in climate risk, e-mobility, sustainable fuels, LCA and digital twins.">
+  <meta property="og:image" content="https://billrizecondor.github.io/assets/img/climate-dashboard.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f5f4a'/><text x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23f4efe4' text-anchor='middle'>BC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f3ec;
+      --surface: #fffdf8;
+      --ink: #17231e;
+      --muted: #5b675f;
+      --line: #e2ddd0;
+      --accent: #1f5f4a;
+      --accent-soft: #e3eee8;
+      --warm: #b8641d;
+      --shadow: 0 1px 2px rgba(23,35,30,.04), 0 8px 24px rgba(23,35,30,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #111714; --surface: #18201c; --ink: #e9ece6; --muted: #9eaaa2;
+        --line: #2a3530; --accent: #7cc4a5; --accent-soft: #1e2f28; --warm: #e59a58;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #111714; --surface: #18201c; --ink: #e9ece6; --muted: #9eaaa2;
+      --line: #2a3530; --accent: #7cc4a5; --accent-soft: #1e2f28; --warm: #e59a58;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 400 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0; letter-spacing: -.01em; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+    .brand { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .theme-btn { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; display: grid; place-items: center; }
+    .theme-btn:hover { color: var(--ink); }
+
+    /* Hero */
+    header.hero { padding: 88px 0 72px; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--warm); margin: 0 0 18px; }
+    .hero h1 { font-size: clamp(38px, 6vw, 64px); max-width: 15ch; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero p.lede { font-size: clamp(17px, 2vw, 19px); color: var(--muted); max-width: 60ch; margin: 24px 0 32px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 500; font-size: 15px; text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+    .btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .btn:hover { transform: translateY(-1px); }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .stat b { display: block; font-family: Fraunces, Georgia, serif; font-size: 30px; font-weight: 600; }
+    .stat span { font-size: 14px; color: var(--muted); }
+
+    section { padding: 64px 0; }
+    .sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .sec-head h2 { font-size: clamp(28px, 4vw, 38px); }
+    .sec-head p { color: var(--muted); margin: 0; max-width: 48ch; }
+
+    /* Featured */
+    .feature { display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 24px; }
+    .feature:nth-of-type(even) { grid-template-columns: 1fr 1.25fr; }
+    .feature:nth-of-type(even) .shot { order: 2; }
+    .shot { background: var(--accent-soft); display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 260px; }
+    .shot img { border-radius: 10px; box-shadow: var(--shadow); width: 100%; height: auto; max-height: 360px; object-fit: cover; object-position: top left; }
+    .feature .body { padding: 32px; display: flex; flex-direction: column; }
+    .tag { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--warm); margin-bottom: 10px; }
+    .feature h3 { font-size: 26px; margin-bottom: 12px; }
+    .feature p { color: var(--muted); margin: 0 0 16px; }
+    .feature ul { margin: 0 0 20px; padding-left: 18px; color: var(--muted); font-size: 15px; }
+    .feature li { margin-bottom: 4px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+    .chip { font-size: 12.5px; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+    .links { display: flex; gap: 18px; margin-top: auto; font-weight: 500; font-size: 15px; flex-wrap: wrap; }
+
+    /* Grid cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; transition: border-color .15s, transform .15s; }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card .icon { font-size: 26px; margin-bottom: 14px; }
+    .card h3 { font-size: 21px; margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+    .card .fact { font-size: 14px; border-left: 3px solid var(--warm); padding: 2px 0 2px 12px; margin: 0 0 18px; color: var(--ink); }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .skill { border-top: 2px solid var(--accent); padding-top: 16px; }
+    .skill h3 { font-size: 18px; margin-bottom: 10px; }
+    .skill p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Contact */
+    .contact { background: var(--accent); color: var(--bg); border-radius: 22px; padding: 56px 40px; text-align: center; }
+    .contact h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 12px; }
+    .contact p { opacity: .85; margin: 0 auto 28px; max-width: 50ch; }
+    .contact .btn { background: var(--bg); color: var(--ink); border-color: transparent; }
+    .contact .btn.ghost { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 50%, transparent); }
+    .contact .cta { justify-content: center; }
+
+    footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+    @media (max-width: 820px) {
+      .feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; }
+      .feature:nth-of-type(even) .shot { order: 0; }
+      .feature .body { padding: 24px; }
+      .nav-links a.hide-sm { display: none; }
+    }
+    @media (max-width: 480px) {
+      .wrap { padding: 0 16px; }
+      header.hero { padding: 56px 0 48px; }
+      .stats { grid-template-columns: 1fr; gap: 20px; }
+      .contact { padding: 40px 20px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .btn:hover, .card:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top">Billriz Condor</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#research" class="hide-sm">Research</a>
+        <a href="#skills" class="hide-sm">Skills</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">◐</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Energy &amp; Environment Engineer · ME3 Master's</p>
+      <h1>Engineering a <em>fairer</em> energy transition.</h1>
+      <p class="lede">I combine life cycle assessment, techno-economic analysis and data-driven modelling to answer practical questions. When does an EV beat a combustion car? Can bus depots support the grid? What would it take to fuel a country's aviation sustainably? My work often centres on climate-vulnerable places like my home country, the Philippines.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View projects →</a>
+        <a class="btn" href="https://github.com/billrizecondor" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:billrizecondor@gmail.com">Email me</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>244</b><span>countries in my climate risk dashboard</span></div>
+        <div class="stat"><b>3</b><span>national grids compared in the EV life cycle assessment</span></div>
+        <div class="stat"><b>€7.9B</b><span>estimated sustainable aviation fuel transition for the Philippines</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Featured projects</h2>
+        <p>Hands-on tools and models, from interactive dashboards to machine-learning digital twins.</p>
+      </div>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/climate-dashboard.webp" alt="Global Climate Risk Index dashboard showing a world map shaded by energy risk, with the Philippines' profile panel" width="1200" height="546" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Data visualization</div>
+          <h3>Global Climate Risk Dashboard</h3>
+          <p>An interactive world map scoring 244 countries and territories on four climate-risk layers. Each layer has its own colour scale and a profile panel for every country.</p>
+          <ul>
+            <li>Energy, water, land and society risk views</li>
+            <li>Country search, highest-risk ranking and score breakdowns</li>
+            <li>Python-ready structure for adding real, sourced indicators</li>
+          </ul>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Plotly</span><span class="chip">Python</span><span class="chip">HTML/CSS</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/climate-nexus-project/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/billrizecondor/climate-nexus-project" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/digital-twin.webp" alt="Scatter plots of electrical efficiency against methane share, methane mass flow, diesel energy substitution and thermal efficiency" width="1200" height="417" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Machine learning · IMT Atlantique</div>
+          <h3>Dual-Fuel Engine Digital Twin</h3>
+          <p>A virtual replica of a dual-fuel engine built from measured engine-mapping data. It predicts the engine's behaviour and is shown as a 3D model in the GreenTwin web platform.</p>
+          <ul>
+            <li>Linear regression for exhaust gas temperature</li>
+            <li>K-nearest neighbours for electrical efficiency</li>
+            <li>Tkinter dashboard plus a 3D model built in Blender</li>
+          </ul>
+          <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">pandas</span><span class="chip">Blender</span></div>
+          <div class="links">
+            <a href="https://github.com/billrizecondor/dual_fuel_engine_digital_twin" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/quiz.webp" alt="Quiz Bee Board game interface with team scores and a grid of clue tiles" width="662" height="533" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Web app</div>
+          <h3>Quiz Bee Board</h3>
+          <p>A browser-based game board for running live team quiz competitions. It has scoring, picture clues and an in-app editor, so organisers can change questions without writing code.</p>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/quiz-final/" target="_blank" rel="noopener">Play it ↗</a>
+            <a href="https://github.com/billrizecondor/quiz-final" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Research &amp; analysis</h2>
+        <p>Studies on e-mobility, sustainable fuels and climate justice.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🚌</div>
+          <h3>Vehicle-to-Grid for Berlin's E-Buses</h3>
+          <p>Techno-economic proposal for adding bidirectional (Bus-to-Grid) charging at a BVG depot, covering CAPEX/OPEX, sensitivity analysis, risks and a business model.</p>
+          <p class="fact">A bidirectional charger costs about 30% more but enables peak shaving and smart charging.</p>
+          <div class="chips"><span class="chip">Techno-economics</span><span class="chip">Smart grid</span></div>
+          <div class="links"><a href="https://github.com/billrizecondor/ev" target="_blank" rel="noopener">Read the proposal →</a></div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🔋</div>
+          <h3>LCA: Electric vs. Combustion Cars</h3>
+          <p>ISO 14040/44 cradle-to-use life cycle assessment in openLCA with ecoinvent data, comparing BEVs and ICE vehicles on French, German and Hungarian grids.</p>
+          <p class="fact">The electricity mix is the dominant driver of a BEV's climate impact.</p>
+          <div class="chips"><span class="chip">openLCA</span><span class="chip">ecoinvent</span></div>
+          <div class="links"><a href="https://github.com/billrizecondor/lca-ev-ice" target="_blank" rel="noopener">Read the report →</a></div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">✈️</div>
+          <h3>Sustainable Aviation Fuel in the Philippines</h3>
+          <p>Energy, land and investment needs for replacing jet fuel with e-kerosene made from direct-air-captured CO₂ and solar or wind power.</p>
+          <p class="fact">About €7.9 billion is needed to move current Philippine jet fuel demand to SAF.</p>
+          <div class="chips"><span class="chip">E-fuels</span><span class="chip">DAC</span><span class="chip">Excel modelling</span></div>
+          <div class="links"><a href="https://github.com/billrizecondor/saf_projects_me3" target="_blank" rel="noopener">Read the paper →</a></div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌀</div>
+          <h3>Climate Justice in the Philippines</h3>
+          <p>A review of the gap between climate vulnerability and emissions contribution in the world's most at-risk country, with policy recommendations.</p>
+          <p class="fact">The country is ranked most at-risk globally yet is among the lowest emitters.</p>
+          <div class="chips"><span class="chip">Climate policy</span><span class="chip">Research</span></div>
+          <div class="links"><a href="https://github.com/billrizecondor/climate-risk-and-vulnerability" target="_blank" rel="noopener">Read the paper →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Toolbox</h2></div>
+      <div class="skills">
+        <div class="skill"><h3>Modelling &amp; data</h3><p>Python (pandas, NumPy, scikit-learn, Matplotlib, Seaborn), Excel, regression &amp; KNN models</p></div>
+        <div class="skill"><h3>Sustainability assessment</h3><p>Life cycle assessment (ISO 14040/44), openLCA, ecoinvent, scenario analysis</p></div>
+        <div class="skill"><h3>Energy systems</h3><p>Techno-economic analysis, CAPEX/OPEX modelling, V2G &amp; smart grids, e-fuels, dual-fuel engines</p></div>
+        <div class="skill"><h3>Web &amp; visualization</h3><p>HTML, CSS, JavaScript, Plotly, interactive dashboards, Blender 3D</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's work on the transition together.</h2>
+        <p>I'm open to internships, research collaborations and roles in energy, sustainability and climate analytics.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:billrizecondor@gmail.com">billrizecondor@gmail.com</a>
+          <a class="btn ghost" href="https://github.com/billrizecondor" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="yr">2026</span> Billriz Condor</footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const root = document.documentElement, btn = document.getElementById('themeBtn');
+    try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+    btn.addEventListener('click', () => {
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>
