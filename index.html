@@ -141,7 +141,6 @@
       <a class="brand" href="#top">Billriz Condor</a>
       <div class="nav-links">
         <a href="#projects">Projects</a>
-        <a href="#research" class="hide-sm">Research</a>
         <a href="#skills" class="hide-sm">Skills</a>
         <a href="#contact">Contact</a>
         <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">◐</button>
@@ -170,22 +169,18 @@
   <section id="projects">
     <div class="wrap">
       <div class="sec-head">
-        <h2>Featured projects</h2>
-        <p>Hands-on tools and models, from interactive dashboards to machine-learning digital twins.</p>
+        <h2>Projects</h2>
+        <p>Energy and climate work, each with an interactive demo built from the original results and the code behind it.</p>
       </div>
 
       <article class="feature">
-        <div class="shot"><img src="assets/img/climate-dashboard.webp" alt="Global Climate Risk Index dashboard showing a world map shaded by energy risk, with the Philippines' profile panel" width="1200" height="546" loading="lazy"></div>
+        <div class="shot"><img src="assets/img/climate-dashboard.webp" alt="Global Climate Risk Index dashboard showing a world map shaded by energy risk" width="1200" height="546" loading="lazy"></div>
         <div class="body">
           <div class="tag">Data visualization</div>
           <h3>Global Climate Risk Dashboard</h3>
-          <p>An interactive world map scoring 244 countries and territories on four climate-risk layers. Each layer has its own colour scale and a profile panel for every country.</p>
-          <ul>
-            <li>Energy, water, land and society risk views</li>
-            <li>Country search, highest-risk ranking and score breakdowns</li>
-            <li>Python-ready structure for adding real, sourced indicators</li>
-          </ul>
-          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Plotly</span><span class="chip">Python</span><span class="chip">HTML/CSS</span></div>
+          <p>An interactive world map scoring 244 countries and territories on four climate-risk layers, with a profile panel for every country.</p>
+          <ul><li>Energy, water, land and society risk views</li><li>Country search, highest-risk ranking and score breakdowns</li><li>Python-ready structure for adding real, sourced indicators</li></ul>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Plotly</span><span class="chip">Python</span></div>
           <div class="links">
             <a href="https://billrizecondor.github.io/climate-nexus-project/" target="_blank" rel="noopener">Live demo ↗</a>
             <a href="https://github.com/billrizecondor/climate-nexus-project" target="_blank" rel="noopener">Source code</a>
@@ -194,79 +189,78 @@
       </article>
 
       <article class="feature">
-        <div class="shot"><img src="assets/img/digital-twin.webp" alt="Scatter plots of electrical efficiency against methane share, methane mass flow, diesel energy substitution and thermal efficiency" width="1200" height="417" loading="lazy"></div>
+        <div class="shot"><img src="assets/img/lca.webp" alt="Line chart of cumulative CO2 emissions for a petrol car and electric cars on three grids, crossing at the break-even point" width="1047" height="580" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Life cycle assessment · BME</div>
+          <h3>EV vs. Petrol Car: Life Cycle Assessment</h3>
+          <p>An ISO 14040/44 cradle-to-use LCA in openLCA with ecoinvent data. It compares a petrol car with an EV charged on the French, German and Hungarian grids.</p>
+          <ul><li>EV cuts lifetime CO₂-eq by 54–78% depending on the grid</li><li>Climate break-even after about 11,000–16,000 km</li><li>Interactive explorer for all 18 ReCiPe impact categories</li></ul>
+          <div class="chips"><span class="chip">openLCA</span><span class="chip">ecoinvent</span><span class="chip">Python</span><span class="chip">Chart.js</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/lca-ev-ice/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/billrizecondor/lca-ev-ice" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/v2g.webp" alt="Scenario explorer comparing benefit in OPEX for unidirectional and bidirectional chargers, with a sensitivity matrix" width="1050" height="680" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Techno-economics · team project</div>
+          <h3>Bus-to-Grid for Berlin's E-Buses</h3>
+          <p>A techno-economic proposal for adding bidirectional charging at a BVG depot, so parked buses charge cheaply at night and sell power back at peaks.</p>
+          <ul><li>Only +€41M (+6%) CAPEX for bidirectional chargers</li><li>Benefit in OPEX rises from 16–21% to 22–33%</li><li>Scenario explorer and Python financial model</li></ul>
+          <div class="chips"><span class="chip">Financial modelling</span><span class="chip">Sensitivity analysis</span><span class="chip">Python</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/ev/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/billrizecondor/ev" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/saf.webp" alt="Bar charts of renewable capacity needed for e-kerosene against Philippine targets, and CAPEX by route" width="1050" height="530" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Energy storage · e-fuels</div>
+          <h3>Sustainable Aviation Fuel for the Philippines</h3>
+          <p>Sizes the solar or wind capacity, land and investment needed to replace all Philippine jet fuel with e-kerosene made from direct-air-captured CO₂.</p>
+          <ul><li>€4.8–7.9B CAPEX at 2030 technology prices</li><li>28–42% more renewables than the 2040 goal</li><li>Interactive calculator backed by a Python model</li></ul>
+          <div class="chips"><span class="chip">E-fuels</span><span class="chip">DAC</span><span class="chip">Excel</span><span class="chip">Python</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/saf_projects_me3/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/billrizecondor/saf_projects_me3" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/climate.webp" alt="Scatter plot of WorldRiskIndex score against share of global CO2 emissions, with the Philippines at the top" width="1040" height="585" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Climate policy · data analysis</div>
+          <h3>Climate Justice in the Philippines</h3>
+          <p>Plots disaster risk against emissions for 182 countries. The Philippines ranks first for risk yet emits about 0.4% of global fossil CO₂.</p>
+          <ul><li>Joins WorldRiskIndex 2024 with EDGAR emissions data</li><li>Switch between risk, exposure and vulnerability</li><li>Makes the case for climate finance after COP29</li></ul>
+          <div class="chips"><span class="chip">pandas</span><span class="chip">Open data</span><span class="chip">Policy research</span></div>
+          <div class="links">
+            <a href="https://billrizecondor.github.io/climate-risk-and-vulnerability/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/billrizecondor/climate-risk-and-vulnerability" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot"><img src="assets/img/digital-twin.webp" alt="Scatter plots of electrical efficiency against methane share, methane mass flow, diesel substitution and thermal efficiency" width="1200" height="417" loading="lazy"></div>
         <div class="body">
           <div class="tag">Machine learning · IMT Atlantique</div>
           <h3>Dual-Fuel Engine Digital Twin</h3>
-          <p>A virtual replica of a dual-fuel engine built from measured engine-mapping data. It predicts the engine's behaviour and is shown as a 3D model in the GreenTwin web platform.</p>
-          <ul>
-            <li>Linear regression for exhaust gas temperature</li>
-            <li>K-nearest neighbours for electrical efficiency</li>
-            <li>Tkinter dashboard plus a 3D model built in Blender</li>
-          </ul>
+          <p>A virtual replica of a dual-fuel engine built from measured engine-mapping data, and shown as a 3D model in the GreenTwin web platform.</p>
+          <ul><li>Linear regression for exhaust gas temperature</li><li>K-nearest neighbours for electrical efficiency</li><li>Tkinter dashboard plus a 3D model built in Blender</li></ul>
           <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">pandas</span><span class="chip">Blender</span></div>
           <div class="links">
             <a href="https://github.com/billrizecondor/dual_fuel_engine_digital_twin" target="_blank" rel="noopener">Source code</a>
           </div>
         </div>
       </article>
-
-      <article class="feature">
-        <div class="shot"><img src="assets/img/quiz.webp" alt="Quiz Bee Board game interface with team scores and a grid of clue tiles" width="662" height="533" loading="lazy"></div>
-        <div class="body">
-          <div class="tag">Web app</div>
-          <h3>Quiz Bee Board</h3>
-          <p>A browser-based game board for running live team quiz competitions. It has scoring, picture clues and an in-app editor, so organisers can change questions without writing code.</p>
-          <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
-          <div class="links">
-            <a href="https://billrizecondor.github.io/quiz-final/" target="_blank" rel="noopener">Play it ↗</a>
-            <a href="https://github.com/billrizecondor/quiz-final" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Research &amp; analysis</h2>
-        <p>Studies on e-mobility, sustainable fuels and climate justice.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="icon" aria-hidden="true">🚌</div>
-          <h3>Vehicle-to-Grid for Berlin's E-Buses</h3>
-          <p>Techno-economic proposal for adding bidirectional (Bus-to-Grid) charging at a BVG depot, covering CAPEX/OPEX, sensitivity analysis, risks and a business model.</p>
-          <p class="fact">A bidirectional charger costs about 30% more but enables peak shaving and smart charging.</p>
-          <div class="chips"><span class="chip">Techno-economics</span><span class="chip">Smart grid</span></div>
-          <div class="links"><a href="https://github.com/billrizecondor/ev" target="_blank" rel="noopener">Read the proposal →</a></div>
-        </article>
-        <article class="card">
-          <div class="icon" aria-hidden="true">🔋</div>
-          <h3>LCA: Electric vs. Combustion Cars</h3>
-          <p>ISO 14040/44 cradle-to-use life cycle assessment in openLCA with ecoinvent data, comparing BEVs and ICE vehicles on French, German and Hungarian grids.</p>
-          <p class="fact">The electricity mix is the dominant driver of a BEV's climate impact.</p>
-          <div class="chips"><span class="chip">openLCA</span><span class="chip">ecoinvent</span></div>
-          <div class="links"><a href="https://github.com/billrizecondor/lca-ev-ice" target="_blank" rel="noopener">Read the report →</a></div>
-        </article>
-        <article class="card">
-          <div class="icon" aria-hidden="true">✈️</div>
-          <h3>Sustainable Aviation Fuel in the Philippines</h3>
-          <p>Energy, land and investment needs for replacing jet fuel with e-kerosene made from direct-air-captured CO₂ and solar or wind power.</p>
-          <p class="fact">About €7.9 billion is needed to move current Philippine jet fuel demand to SAF.</p>
-          <div class="chips"><span class="chip">E-fuels</span><span class="chip">DAC</span><span class="chip">Excel modelling</span></div>
-          <div class="links"><a href="https://github.com/billrizecondor/saf_projects_me3" target="_blank" rel="noopener">Read the paper →</a></div>
-        </article>
-        <article class="card">
-          <div class="icon" aria-hidden="true">🌀</div>
-          <h3>Climate Justice in the Philippines</h3>
-          <p>A review of the gap between climate vulnerability and emissions contribution in the world's most at-risk country, with policy recommendations.</p>
-          <p class="fact">The country is ranked most at-risk globally yet is among the lowest emitters.</p>
-          <div class="chips"><span class="chip">Climate policy</span><span class="chip">Research</span></div>
-          <div class="links"><a href="https://github.com/billrizecondor/climate-risk-and-vulnerability" target="_blank" rel="noopener">Read the paper →</a></div>
-        </article>
-      </div>
     </div>
   </section>
 
