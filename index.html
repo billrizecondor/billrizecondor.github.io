@@ -6,7 +6,7 @@
   <title>Billriz Condor · Climate Risk Analyst</title>
   <meta name="description" content="Billriz Condor: climate risk analyst. Hazard exposure, vulnerability and risk analytics, supported by life cycle assessment and energy-transition modelling.">
   <meta property="og:title" content="Billriz Condor · Climate Risk Analyst">
-  <meta property="og:description" content="Climate risk analytics, with life cycle assessment and energy-transition modelling as supporting expertise.">
+  <meta property="og:description" content="Climate risk, GIS and energy-transition projects by Billriz Condor, with interactive demos and code.">
   <meta property="og:image" content="https://billrizecondor.github.io/assets/img/climate.webp">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230b1f3a'/><text x='16' y='21' font-family='Arial,sans-serif' font-size='13' font-weight='700' fill='%23ffffff' text-anchor='middle'>BC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,21 +80,6 @@
     .sec-head h2 { font-size: clamp(26px, 3.2vw, 34px); }
     .sec-head p { color: var(--muted); margin: 0; max-width: 52ch; }
 
-    /* expertise */
-    .expertise { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; }
-    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 28px; box-shadow: var(--shadow); }
-    .panel.core { border-top: 3px solid var(--accent); }
-    .panel h3 { font-size: 18px; display: flex; align-items: center; gap: 10px; }
-    .level { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
-    .level.primary { background: var(--accent); color: #fff; }
-    .level.secondary { background: var(--tag-energy-bg); color: var(--tag-energy); }
-    .panel ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 14px; }
-    .panel li b { display: block; font-size: 15px; }
-    .panel li span { color: var(--muted); font-size: 14.5px; }
-    .tools { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .tools .lbl { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
-    .tool { font-size: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); }
-
     /* projects */
     .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
     .project { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); transition: border-color .15s, box-shadow .15s; }
@@ -129,7 +114,6 @@
     footer a { color: var(--muted); }
 
     @media (max-width: 900px) {
-      .expertise { grid-template-columns: 1fr; }
       .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .fig:nth-child(2) { border-right: 0; }
       .fig:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -145,7 +129,7 @@
       .figures { grid-template-columns: 1fr; }
       .fig { border-right: 0; border-bottom: 1px solid var(--line); }
       .fig:last-child { border-bottom: 0; }
-      .panel, .contact { padding: 22px; }
+      .contact { padding: 22px; }
       .kpis { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
@@ -157,7 +141,6 @@
       <a class="brand" href="#top"><span class="mark">BC</span><span class="name">Billriz Condor<span class="role">Climate Risk Analyst</span></span></a>
       <div class="nav-links">
         <a href="#work">Work</a>
-        <a href="#expertise" class="hide-sm">Expertise</a>
         <a href="#contact">Contact</a>
         <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">◐</button>
       </div>
@@ -180,42 +163,11 @@
   <div class="wrap">
     <div class="figures">
       <div class="fig"><b>5 years</b><span>applied climate and environmental-risk research in the Philippines</span></div>
-      <div class="fig"><b>100+</b><span>regional government leaders briefed on risk and impact findings</span></div>
+      <div class="fig"><b>2 Master's</b><span>Erasmus Mundus Joint Master's (France &amp; Hungary) and MSc Energy Engineering</span></div>
       <div class="fig"><b>USD 60K</b><span>climate-action research project coordinated, leading a team of 5</span></div>
       <div class="fig"><b>5</b><span>peer-reviewed publications</span></div>
     </div>
   </div>
-
-  <section id="expertise">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="kicker">Expertise</p><h2>Climate risk first, backed by energy-systems depth</h2></div>
-      </div>
-      <div class="expertise">
-        <div class="panel core">
-          <h3>Climate risk &amp; resilience <span class="level primary">Core</span></h3>
-          <ul>
-            <li><b>Climate risk assessment</b><span>Hazard exposure, vulnerability and composite risk indices, following the WorldRiskIndex framework (risk = exposure × vulnerability)</span></li>
-            <li><b>Climate data analytics</b><span>Joining and cleaning global datasets such as WorldRiskIndex and EDGAR in reproducible Python pipelines</span></li>
-            <li><b>Risk visualisation</b><span>Interactive dashboards, choropleth maps and country risk profiles for non-technical audiences</span></li>
-            <li><b>Climate policy &amp; finance</b><span>Loss and damage, adaptation finance, and COP climate-finance negotiations</span></li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Energy transition <span class="level secondary">Secondary</span></h3>
-          <ul>
-            <li><b>Life cycle assessment</b><span>ISO 14040/44 studies in openLCA with ecoinvent and ReCiPe 2016</span></li>
-            <li><b>Techno-economic analysis</b><span>CAPEX/OPEX models, scenario and sensitivity analysis</span></li>
-            <li><b>Low-carbon technologies</b><span>E-mobility and vehicle-to-grid, sustainable aviation fuels, and ML-based digital twins</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="tools">
-        <span class="lbl">Tools</span>
-        <span class="tool">Python</span><span class="tool">pandas</span><span class="tool">NumPy</span><span class="tool">scikit-learn</span><span class="tool">Plotly</span><span class="tool">Chart.js</span><span class="tool">JavaScript</span><span class="tool">Excel</span><span class="tool">openLCA</span><span class="tool">ecoinvent</span><span class="tool">Git</span>
-      </div>
-    </div>
-  </section>
 
   <section id="work">
     <div class="wrap">
